@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Part 1</h1>
+<h3>Problem 1</h3>
+<div>Reverse a string:</div>
+<div id="probOne">Hello World!</div>
+<button onclick="reverseString()">Reverse</button>
+
+
+<h3>Problem 2</h3>
+<div>Capitalize letter:</div>
+<div id="probTwo">hello my sweet world</div>
+<button onclick="capitalizeLetters()">Capitalize</button>
+
+
+<h3>Problem 3</h3>
+<div>Compress a string of charactors:</div>
+<div id="probThree">aaabbbbbccccaacccbbbaaabbbaaa</div>
+<button onclick="compressString()">Compress</button>
+
+
+<h3>Problem 4</h3>
+<div>Check is palindrome:</div>
+<div id="probFour">madam</div>
+<button onclick="isPalindrome()">Check</button><br>
+
+<input type="string" id="probFourB"><br>
+<div id="probFourC"></div>
+<button onclick="isInputPalindrome(document.getElementById('probFourB').value)">Check</button>
+
+<hr><hr>
+<h1>Part 2</h1>
+<h3>Problem 1</h3>
+<div>Happy Numbers:</div>
+<input type="number" name="isHappy" id="isHappy"><br>
+<div id="probFive"></div>
+<button onclick="isHappyNumber(document.getElementById('isHappy').value)">Check</button>
+
+<h3>Problem 2</h3>
+<div>All prime numbers between 1 and 100:</div>
+<div id="probSix"></div>
+<button onclick="firstPrimes()">Show Primes</button>
+
+<div>Problem 3</div>
+
+<script src="app.js"></script>
+</body>
+</html>
