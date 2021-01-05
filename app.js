@@ -119,16 +119,24 @@ function isHappyNumber(isHappy) {
     }
 }
 
-// function firstPrimes(){
-//     for (let i = 0; i < 100; i++) {
-//         let isPrime = false;
-//         for (let j = 0; j < array.length; j++) {
-//             if (i%j===0 && j!==i) {
-//                 isPrime = true;
-//             }
-//         }
-//         if (isPrime ===false) {
-//             document.getElementById("probFive").innerHTML = 
-//         }
-//     }
-// }
+function firstPrimes(){
+    let primes = "1";
+    for (i = 0; i < 100; i++) {
+        if(isPrime(i)){
+            primes = primes + " " + i;
+        }
+    }
+    document.getElementById("probSix").innerHTML = primes;
+}
+
+function isPrime(num){
+    if(num < 2) {
+        return false;
+    }
+    for (var i = 2; i < num; i++) {
+        if(num%i==0){
+            return false;
+        }
+    }
+    return true;
+}
