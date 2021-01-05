@@ -1,14 +1,4 @@
 
-
-function updateTextOnClick(){
-    document.getElementById("myText").innerHTML = "Goodbye World";
-    for(let i = 0; i <10 ;i++){
-        console.log(i)
-    }
-    let gregsVariable = 1 + "1";
-    console.log(gregsVariable);
-}
-
 function reverseString(){
     let forwardsWord = document.getElementById("probOne").innerHTML;
     let reverseWord = "";
@@ -19,6 +9,7 @@ function reverseString(){
     document.getElementById("probOne").innerHTML = reverseWord;
 }
 
+//Changes a hard coded string in the HTML to be capitlazed
 function capitalizeLetters(){
     let lowerCaseWords = document.getElementById("probTwo").innerHTML;
     let capitalizedWords = "";
@@ -36,6 +27,7 @@ function capitalizeLetters(){
     document.getElementById("probTwo").innerHTML = capitalizedWords;
 }
 
+//Compress a string thats hard coded to the HTML
 function compressString(){
     let uncompressedWord = document.getElementById("probThree").innerHTML;
     let compressedWord = "";
@@ -56,6 +48,7 @@ function compressString(){
     document.getElementById("probThree").innerHTML = compressedWord;
 }
 
+//Checks if a hard coded to the HTML word is a palandrome
 function isPalindrome() {
     let mightBePalindrome = document.getElementById("probFour").innerHTML;
 
@@ -78,6 +71,7 @@ function isPalindrome() {
     }
 }
 
+//Checks if a passed string is a palindrome
 function isInputPalindrome(mightBePalindrome) {
     let j = mightBePalindrome.length - 1;
     let notPalindrome = true;
@@ -98,6 +92,7 @@ function isInputPalindrome(mightBePalindrome) {
     }
 }
 
+//checks if a passed number is a Happy Number
 function isHappyNumber(isHappy) {
     let remander = 0;
     let sum = 0;
@@ -119,6 +114,7 @@ function isHappyNumber(isHappy) {
     }
 }
 
+//runs through 1-100 and posting results
 function firstPrimes(){
     let primes = "1";
     for (i = 0; i < 100; i++) {
@@ -129,6 +125,7 @@ function firstPrimes(){
     document.getElementById("probSix").innerHTML = primes;
 }
 
+//Checks if passed number is prime
 function isPrime(num){
     if(num < 2) {
         return false;
@@ -139,4 +136,30 @@ function isPrime(num){
         }
     }
     return true;
+}
+
+function getFiboNums(){
+    let startingNum = 1; let temp = 0;
+    let nextNum = startingNum;
+    let fiboNumbers = startingNum;
+    for (let i = 0; i < 9; i++) {
+        temp = startingNum;
+        startingNum = startingNum + nextNum;
+        nextNum = temp;
+        fiboNumbers += " " + nextNum;
+    }
+    document.getElementById("probSevenA").innerHTML = fiboNumbers;
+}
+
+function getAnyFiboNums(startingNumb){
+    let startingNum = parseFloat(startingNumb); let temp = 0;
+    let nextNum = startingNum;
+    let fiboNumbers = startingNum;
+    for (let i = 0; i < 9; i++) {
+        temp = startingNum;
+        startingNum = startingNum + nextNum;
+        nextNum = temp;
+        fiboNumbers += " " + nextNum;
+    }
+    document.getElementById("probSevenB").innerHTML = fiboNumbers;
 }

@@ -48,9 +48,12 @@
 <button onclick="firstPrimes()">Show Primes</button>
 
 <h3>Problem 3</h3>
-<div>All prime numbers between 1 and 100:</div>
-<div id="probSix"></div>
-<button onclick="firstPrimes()">Show Primes</button>
+<div>The first 10 Fibonacci numbers:</div>
+<div id="probSevenA"></div>
+<button onclick="getFiboNums()">Find</button><br>
+<input type="number" name="fibo" id="fibo"><br>
+<div id="probSevenB"></div>
+<button onclick="getAnyFiboNums(document.getElementById('fibo').value)">Find</button>
 
 <script src="app.js"></script>
 </body>
