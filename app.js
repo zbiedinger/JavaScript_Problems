@@ -93,28 +93,50 @@ function isInputPalindrome(mightBePalindrome) {
 }
 
 //checks if a passed number is a Happy Number
+// function isHappyNumber(isHappy) {
+//     let remander = 0;
+//     let sum = 0;
+//     while (sum != 1 && sum != 4) {
+//         remander = 0;
+//         sum = 0;
+
+//         while (isHappy > 0) {
+//             remander = isHappy % 10;
+//             sum = sum + (remander ** 2)
+//             isHappy = isHappy / 10;
+//         }
+//     }
+
+//     if (sum == 1) {
+//         document.getElementById("probFive").innerHTML = "Happy Number"
+//     } else {
+//         document.getElementById("probFive").innerHTML = "Not Happy Number"
+//     }
+// }
+
+
+var sumArray = [];
 function isHappyNumber(isHappy) {
-    let remander = 0;
-    let sum = 0;
-    while (sum != 1 && sum != 4) {
-        remander = 0;
-        sum = 0;
+    isHappy = isHappy.toString().split('');
+    var sum = 0;
 
-        while (isHappy > 0) {
-            remander = isHappy % 10;
-            sum = sum + (remander ** 2)
-            isHappy = isHappy / 10;
-        }
+    for (i = 0; i < isHappy.length; i++) {
+        sum += +isHappy[i] * +isHappy[i];
     }
-
     if (sum == 1) {
-        document.getElementById("probFive").innerHTML = "Happy Number"
+        document.getElementById("probFive").innerHTML = "Happy Number";
     } else {
-        document.getElementById("probFive").innerHTML = "Not Happy Number"
+        if (sumArray.indexOf(sum) === -1) {
+            sumArray.push(sum);
+            return isHappyNumber(sum);
+        } else {
+            document.getElementById("probFive").innerHTML = "Not Happy Number";
+        }
     }
 }
 
-//runs through 1-100 and posting results
+
+//Runs through 1-100 and posting results
 function firstPrimes(){
     let primes = "1";
     for (i = 0; i < 100; i++) {
@@ -138,6 +160,7 @@ function isPrime(num){
     return true;
 }
 
+//Displays the first 10 Fibonicci numbers starting with 1
 function getFiboNums(){
     let startingNum = 1; let temp = 0;
     let nextNum = startingNum;
@@ -151,6 +174,7 @@ function getFiboNums(){
     document.getElementById("probSevenA").innerHTML = fiboNumbers;
 }
 
+//Displays the first 10 Fibonicci numbers starting with a passed number
 function getAnyFiboNums(startingNumb){
     let startingNum = parseFloat(startingNumb); let temp = 0;
     let nextNum = startingNum;
