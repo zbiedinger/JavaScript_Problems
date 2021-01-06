@@ -4,62 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Javascript Problems</title>
 </head>
 
 <body>
-    <h1>Part 1</h1>
-    <h3>Problem 1</h3>
-    <div>Reverse a string:</div>
-    <div id="probOne">Hello World!</div>
-    <button onclick="reverseString()">Reverse</button>
+    <div class="container">
+        <div class="">
+            <h1>Zack's JavaScript Assignment</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Part 1</h3>
+                <hr>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Reverse a string:</h6>
+                        <p class="card-text" id="probOne">Hello World!</p>
+                        <button type="button" class="btn btn-dark" onclick="reverseString()">Reverse</button>
+                    </div>
+                </div>
 
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 2</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Capitalize letter:</h6>
+                
+                        <p class="card-text" id="probTwo">hello my sweet world</p>
+                        <button type="button" class="btn btn-dark" onclick="capitalizeLetters()">Capitalize</button>
+                    </div>
+                </div>
 
-    <h3>Problem 2</h3>
-    <div>Capitalize letter:</div>
-    <div id="probTwo">hello my sweet world</div>
-    <button onclick="capitalizeLetters()">Capitalize</button>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 3</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Compress a string:</h6>
+                        <p class="card-text" id="probThree">aaabbbbbccccaacccbbbaaabbbaaa</p>
+                        <button type="button" class="btn btn-dark" onclick="compressString()">Compress</button>
+                    </div>
+                </div>
 
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 4</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Check if palindrome:</h6>
+                        <p class="card-text" id="probFour">madam</p>
+                        <button type="button" class="btn btn-dark" onclick="isPalindrome()">Check</button><br>
+                        <h4><a href="#" class="badge badge-success" id="probFourC"></a></h4>
+                
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Test Palindrome" aria-label="Test Palindrome"
+                                aria-describedby="basic-addon2" id="probFourB">
+                            <div class="input-group-append">
+                                <button class="btn btn-dark" type="button"
+                                    onclick="isInputPalindrome(document.getElementById('probFourB').value)">Ckeck</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <h3>Problem 3</h3>
-    <div>Compress a string of charactors:</div>
-    <div id="probThree">aaabbbbbccccaacccbbbaaabbbaaa</div>
-    <button onclick="compressString()">Compress</button>
+            <div class="col-sm-6">
+                <h3>Part 2</h3>
+                <hr>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Happy Numbers:</h6>
+                        <p class="card-text" id="probFive"></p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Test Happy Number" aria-label="Test Happy Number"
+                                aria-describedby="basic-addon2" id="isHappy">
+                            <div class="input-group-append">
+                                <button class="btn btn-dark" type="button"
+                                    onclick="isHappyNumber(document.getElementById('isHappy').value)">Ckeck</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 2</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">All prime numbers between 1 and 100:</h6>
+                        <p class="card-text" id="probSix"></p>
+                        <button type="button" class="btn btn-dark" onclick="firstPrimes()">Show Primes</button>
+                    </div>
+                </div>
 
-
-    <h3>Problem 4</h3>
-    <div>Check is palindrome:</div>
-    <div id="probFour">madam</div>
-    <button onclick="isPalindrome()">Check</button><br>
-
-    <input id="probFourB"><br>
-    <div id="probFourC"></div>
-    <button onclick="isInputPalindrome(document.getElementById('probFourB').value)">Check</button>
-
-    <hr>
-    <hr>
-
-    <h1>Part 2</h1>
-    <h3>Problem 1</h3>
-    <div>Happy Numbers:</div>
-    <input id="isHappy"><br>
-    <div id="probFive"></div>
-    <button onclick="isHappyNumber(document.getElementById('isHappy').value)">Check</button>
-
-    <h3>Problem 2</h3>
-    <div>All prime numbers between 1 and 100:</div>
-    <div id="probSix"></div>
-    <button onclick="firstPrimes()">Show Primes</button>
-
-    <h3>Problem 3</h3>
-    <div>The first 10 Fibonacci numbers:</div>
-    <div id="probSevenA"></div>
-    <button onclick="getFiboNums()">Find</button><br>
-    <input id="fibo"><br>
-    <div id="probSevenB"></div>
-    <button onclick="getAnyFiboNums(document.getElementById('fibo').value)">Find</button>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem 3</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">First 10 Fibonacci numbers::</h6>
+                        <p class="card-text" id="probSevenA"></p>
+                        <button type="button" class="btn btn-dark" onclick="getFiboNums()">Find</button><br>
+                        <div id="probSevenB"></div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Starter Number" aria-label="Starter Number"
+                                aria-describedby="basic-addon2" id="fibo">
+                            <div class="input-group-append">
+                                <button class="btn btn-dark" type="button"
+                                    onclick="getAnyFiboNums(document.getElementById('fibo').value)">Ckeck</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

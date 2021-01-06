@@ -92,29 +92,7 @@ function isInputPalindrome(mightBePalindrome) {
     }
 }
 
-//checks if a passed number is a Happy Number
-// function isHappyNumber(isHappy) {
-//     let remander = 0;
-//     let sum = 0;
-//     while (sum != 1 && sum != 4) {
-//         remander = 0;
-//         sum = 0;
-
-//         while (isHappy > 0) {
-//             remander = isHappy % 10;
-//             sum = sum + (remander ** 2)
-//             isHappy = isHappy / 10;
-//         }
-//     }
-
-//     if (sum == 1) {
-//         document.getElementById("probFive").innerHTML = "Happy Number"
-//     } else {
-//         document.getElementById("probFive").innerHTML = "Not Happy Number"
-//     }
-// }
-
-
+//Displays if a passed number is happy
 var sumArray = [];
 function isHappyNumber(isHappy) {
     isHappy = isHappy.toString().split('');
